@@ -5,10 +5,10 @@ async function getPosts() {
   let { data: posts, error } = await supabase
     .from('posts')
     .select(`
-      title,
-      slug,
+      *,
       paragraphs (
         post_id,
+        id,
         ui_order,
         body
       )

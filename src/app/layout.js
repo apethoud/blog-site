@@ -11,7 +11,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>andrewpethoud.dev</div>
+            <div style={{ display: "flex" }}>
+              <div>Blog</div>
+              <div>Projects</div>
+            </div>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }

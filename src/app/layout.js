@@ -1,7 +1,7 @@
 import { AppContainer } from './globalStyles'
-import { Inter } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <AppContainer>
-        <div className={inter.className}>
+        <div className={nunito.className}>
           <nav>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div>andrewpethoud.dev</div>

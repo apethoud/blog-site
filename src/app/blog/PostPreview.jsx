@@ -1,9 +1,9 @@
-import { Title } from "./styles";
+import { H1 } from "../globalStyles";
 
 export default function PostPreview({ post }) {
   return (
     <div>
-      <Title className="title">{post.title}</Title>
+      <H1>{post.title}</H1>
     </div>
   )
 }

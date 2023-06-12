@@ -1,7 +1,6 @@
 'use client';
 
 import styled from 'styled-components';
-import colors from '../colors';
 
 export const BlogContainer = styled.div`
   padding: 12px;
@@ -11,12 +10,5 @@ export const BlogContainer = styled.div`
   }
   @media (min-width: 701px) and (max-width: 1120px) {
     
-  }
-`
-
-export const Title = styled.h1`
-  all: unset;
-  @media (prefers-color-scheme: dark) {
-    color: ${colors.dark.highlight}
   }
 `

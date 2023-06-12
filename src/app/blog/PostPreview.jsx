@@ -1,5 +1,9 @@
+import { Title } from "./styles";
+
 export default function PostPreview({ post }) {
   return (
-    <div>PostPreview</div>
+    <div>
+      <Title className="title">{post.title}</Title>
+    </div>
   )
 }

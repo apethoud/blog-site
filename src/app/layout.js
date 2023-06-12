@@ -1,4 +1,4 @@
-import './globals.css'
+import { AppContainer } from './globalStyles'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -11,18 +11,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>andrewpethoud.dev</div>
-            <div style={{ display: "flex" }}>
-              <div>Blog</div>
-              <div>Projects</div>
+      <AppContainer>
+        <div className={inter.className}>
+          <nav>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div>andrewpethoud.dev</div>
+              <div style={{ display: "flex" }}>
+                <div>Blog</div>
+                <div>Projects</div>
+              </div>
             </div>
+          </nav>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            {children}
           </div>
-        </nav>
-        {children}
-      </body>
+        </div>
+      </AppContainer>
     </html>
   )
 }

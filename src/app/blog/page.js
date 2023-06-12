@@ -1,5 +1,6 @@
 import { supabase } from "../../../supabaseClient"
 import PostList from "./PostList";
+import { BlogContainer } from "./styles";
 
 async function getPosts() {
   let { data: posts, error } = await supabase
@@ -19,9 +20,9 @@ async function getPosts() {
 export default async function Blog() {
   const posts = await getPosts();
   return (
-    <>
+    <BlogContainer>
       <div>Blog Home</div>
       <PostList posts={posts} />
-    </>
+    </BlogContainer>
   )
 }

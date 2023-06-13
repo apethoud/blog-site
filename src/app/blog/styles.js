@@ -1,6 +1,7 @@
 'use client';
 
 import styled from 'styled-components';
+import colors from '../colors';
 
 export const BlogContainer = styled.div`
   padding: 12px;
@@ -14,6 +15,9 @@ export const BlogContainer = styled.div`
 `
 
 export const PostPreviewContainer = styled.div`
-  border-bottom: 1px solid #1F5168;
   padding-bottom: 24px;
+  border-bottom: 1px solid ${colors.light.highlightMuted100};
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid ${colors.dark.highlightMuted100};
+  }
 `

@@ -3,10 +3,10 @@ import { Flex, NavButton, StyledNav } from "./globalStyles";
 export default function Nav() {
   return (
     <StyledNav>
-      <NavButton bold logo>Andrew Pethoud</NavButton>
+      <NavButton bold logo href="/">Andrew Pethoud</NavButton>
       <Flex>
-        <NavButton>Blog</NavButton>
-        <NavButton>Projects</NavButton>
+        <NavButton href="/blog">Blog</NavButton>
+        <NavButton href="/projects">Projects</NavButton>
       </Flex>
     </StyledNav>
   )

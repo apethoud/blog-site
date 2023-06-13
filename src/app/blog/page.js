@@ -21,7 +21,6 @@ export default async function Blog() {
   const posts = await getPosts();
   return (
     <BlogContainer>
-      <div>Blog Home</div>
       <PostList posts={posts} />
     </BlogContainer>
   )

@@ -1,5 +1,5 @@
 import Nav from './Nav'
-import { AppContainer } from './globalStyles'
+import { AppContainer, Background } from './globalStyles'
 import { Nunito } from 'next/font/google'
 
 const nunito = Nunito({ subsets: ['latin'] })
@@ -12,14 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <AppContainer>
-        <div className={nunito.className}>
-          <Nav />
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            {children}
+      <Background>
+        <AppContainer>
+          <div className={nunito.className}>
+            <Nav />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {children}
+            </div>
           </div>
-        </div>
-      </AppContainer>
+        </AppContainer>
+      </Background>
     </html>
   )
 }

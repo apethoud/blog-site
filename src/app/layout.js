@@ -1,3 +1,4 @@
+import Nav from './Nav'
 import { AppContainer } from './globalStyles'
 import { Nunito } from 'next/font/google'
 
@@ -13,15 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AppContainer>
         <div className={nunito.className}>
-          <nav>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div>andrewpethoud.dev</div>
-              <div style={{ display: "flex" }}>
-                <div>Blog</div>
-                <div>Projects</div>
-              </div>
-            </div>
-          </nav>
+          <Nav />
           <div style={{ display: "flex", justifyContent: "center" }}>
             {children}
           </div>

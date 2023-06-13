@@ -7,6 +7,12 @@ import NextLink from 'next/link';
 
 const zilla_slab = Zilla_Slab({ subsets: ['latin'], weight: '700' })
 
+export const Flex = styled.div`
+  display: flex;
+`
+
+// Site Root
+
 export const AppContainer = styled.body`
   all: unset;
   background-color: ${colors.light.background};
@@ -15,6 +21,11 @@ export const AppContainer = styled.body`
     background-color: ${colors.dark.background};
     color: ${colors.dark.foreground};
   }
+`
+
+export const StyledNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
 `
 
 // Text

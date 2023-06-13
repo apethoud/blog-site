@@ -1,12 +1,12 @@
-import { Flex, StyledNav } from "./globalStyles";
+import { Flex, NavButton, StyledNav } from "./globalStyles";
 
 export default function Nav() {
   return (
     <StyledNav>
-      <div>andrewpethoud.dev</div>
+      <NavButton bold logo>Andrew Pethoud</NavButton>
       <Flex>
-        <div>Blog</div>
-        <div>Projects</div>
+        <NavButton>Blog</NavButton>
+        <NavButton>Projects</NavButton>
       </Flex>
     </StyledNav>
   )

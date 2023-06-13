@@ -36,9 +36,19 @@ export const AppContainer = styled.div`
   } */
 `
 
+// Nav
+
 export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
+`
+
+export const NavButton = styled.button`
+  all: unset;
+  padding: 12px;
+  font-size: 18px;
+  ${({ bold }) => bold && 'font-weight: 700;'}
+  ${({ logo }) => logo && 'font-size: 24px;'}
 `
 
 // Text
@@ -60,6 +70,7 @@ export const P = styled.p`
 export const Link = styled(NextLink)`
   text-decoration: none;
   color: ${colors.light.highlight};
+  font-size: 18px;
   @media (prefers-color-scheme: dark) {
     color: ${colors.dark.highlight};
   }

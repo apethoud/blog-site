@@ -1,4 +1,4 @@
-import { H1, P } from "../globalStyles";
+import { H1, LinkText, P } from "../globalStyles";
 import { PostPreviewContainer } from "./styles";
 import { Link } from "../globalStyles";
 
@@ -9,9 +9,13 @@ export default function PostPreview({ post }) {
 
   return (
     <PostPreviewContainer>
-      <H1>{post.title}</H1>
+      <Link href={`blog/${post.slug}`}>
+        <H1>{post.title}</H1>
+      </Link>
       <P>{truncateText(post.paragraphs[0].body)}</P>
-      <Link href={`blog/${post.slug}`}>Read More</Link>
+      <Link href={`blog/${post.slug}`}>
+        <LinkText>Read More</LinkText>
+      </Link>
     </PostPreviewContainer>
   )
 }

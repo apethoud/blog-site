@@ -85,8 +85,16 @@ export const P = styled.p`
 export const Link = styled(NextLink)`
   text-decoration: none;
   color: ${colors.light.highlightBold};
-  font-size: 18px;
   @media (prefers-color-scheme: dark) {
     color: ${colors.dark.highlightBold};
   }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
+
+export const LinkText = styled.div`
+  font-size: 18px;
 `

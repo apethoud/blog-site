@@ -20,8 +20,6 @@ async function getPosts() {
 export default async function Blog() {
   const posts = await getPosts();
   return (
-    <BlogContainer>
-      <PostList posts={posts} />
-    </BlogContainer>
+    <PostList posts={posts} />
   )
 }

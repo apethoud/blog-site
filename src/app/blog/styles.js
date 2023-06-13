@@ -15,5 +15,5 @@ export const BlogContainer = styled.div`
 
 export const PostPreviewContainer = styled.div`
   border-bottom: 1px solid #1F5168;
-  padding: 24px 0;
+  padding-bottom: 24px;
 `

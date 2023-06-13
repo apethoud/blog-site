@@ -48,7 +48,7 @@ export const NavButton = styled(NextLink)`
   padding: 12px;
   font-size: 18px;
   text-decoration: none;
-  ${({ bold }) => bold && 'font-weight: 700;'}
+  font-weight: 700;
   ${({ logo }) => logo && 'font-size: 24px;'}
   color: ${colors.light.foreground};
   @media (prefers-color-scheme: dark) {
@@ -56,11 +56,11 @@ export const NavButton = styled(NextLink)`
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background: ${colors.light.highlightMuted50};
-      color: ${colors.light.highlightBold};
+      background: ${colors.light.highlight90};
+      color: ${colors.light.highlight10};
       @media (prefers-color-scheme: dark) {
-        background: ${colors.dark.highlightMuted50};
-        color: ${colors.dark.highlightBold};
+        background: ${colors.dark.highlight10};
+        color: ${colors.dark.highlight60};
       }
     }
   }
@@ -70,9 +70,9 @@ export const NavButton = styled(NextLink)`
 
 export const StyledH1 = styled.h1`
   font-size: 32px;
-  color: ${colors.light.highlightBold};
+  color: ${colors.light.highlight50};
   @media (prefers-color-scheme: dark) {
-    color: ${colors.dark.highlightBold};
+    color: ${colors.dark.highlight50};
   }
 `
 
@@ -84,9 +84,9 @@ export const P = styled.p`
 
 export const Link = styled(NextLink)`
   text-decoration: none;
-  color: ${colors.light.highlightBold};
+  color: ${colors.light.highlight50};
   @media (prefers-color-scheme: dark) {
-    color: ${colors.dark.highlightBold};
+    color: ${colors.dark.highlight50};
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -97,4 +97,13 @@ export const Link = styled(NextLink)`
 
 export const LinkText = styled.div`
   font-size: 18px;
+`
+
+export const StyledTimestamp = styled.div`
+  font-size: 18px;
+  font-style: italic;
+  color: ${colors.light.foreground};
+  @media (prefers-color-scheme: dark) {
+    color: ${colors.dark.foreground};
+  }
 `

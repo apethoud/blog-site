@@ -16,8 +16,8 @@ export const BlogContainer = styled.div`
 
 export const PostPreviewContainer = styled.div`
   padding-bottom: 24px;
-  border-bottom: 1px solid ${colors.light.highlightMuted100};
+  border-bottom: 1px solid ${colors.light.highlight70};
   @media (prefers-color-scheme: dark) {
-    border-bottom: 1px solid ${colors.dark.highlightMuted100};
+    border-bottom: 1px solid ${colors.dark.highlight20};
   }
 `

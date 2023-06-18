@@ -1,6 +1,5 @@
 import { supabase } from "../../../supabaseClient"
 import PostList from "./PostList";
-import { BlogContainer } from "./styles";
 
 async function getPosts() {
   let { data: posts, error } = await supabase

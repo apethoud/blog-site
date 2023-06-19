@@ -78,8 +78,13 @@ export const StyledH1 = styled.h1`
 
 export const H1 = ({children}) => <StyledH1 className={zilla_slab.className}>{children}</StyledH1>
 
+export const H2 = styled.h2`
+  text-transform: uppercase;
+`
+
 export const P = styled.p`
   font-size: 20px;
+  line-height: 28px;
 `
 
 export const Link = styled(NextLink)`

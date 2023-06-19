@@ -1,5 +1,6 @@
 import { ContentWrapper, HeroButton, HeroPic, HeroPicContainer, HeroText, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
+import { H2 } from "./globalStyles";
 
 export default function Home() {
 
@@ -16,10 +17,9 @@ export default function Home() {
           </HeroPic>
         </HeroPicContainer>
       </ContentWrapper>
-      <ContentWrapper>
-        <HeroButton>blog</HeroButton>
-        <HeroButton>projects</HeroButton>
-      </ContentWrapper>
+      <div>
+        <H2>From the Blog</H2>
+      </div>
     </div>
   )
 }

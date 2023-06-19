@@ -1,8 +1,8 @@
 import Nav from './Nav'
 import { AppContainer, Background } from './globalStyles'
-import { Nunito } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
 
-const nunito = Nunito({ subsets: ['latin'] })
+const WorkSans = Work_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Background>
         <AppContainer>
-          <div className={nunito.className}>
+          <div className={WorkSans.className}>
             <Nav />
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}

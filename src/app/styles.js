@@ -16,6 +16,7 @@ export const HeroText = styled.div`
   width: 70%;
   padding: 12px;
   font-size: 24px;
+  line-height: 32px;
   color: ${colors.light.highlight50};
   @media (prefers-color-scheme: dark) {
     color: ${colors.dark.highlight50};
@@ -48,17 +49,4 @@ export const StyledImage = styled(Image)`
   position: relative !important;
   height: unset !important;
   border-radius: 50%;
-`
-
-// export const HeroPic = styled.div`
-//   width: 300px;
-//   height: 300px;
-//   @media (max-width: 300px) {
-//     width: 100%;
-//     height: 100%;
-//   }
-// `
-
-export const HeroButton = styled.div`
-
 `

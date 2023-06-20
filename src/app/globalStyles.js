@@ -80,6 +80,12 @@ export const H1 = ({children}) => <StyledH1 className={zilla_slab.className}>{ch
 
 export const H2 = styled.h2`
   text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  color: ${colors.light.highlight30};
+  @media (prefers-color-scheme: dark) {
+    color: ${colors.dark.highlight30};
+  }
 `
 
 export const P = styled.p`

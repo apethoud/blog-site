@@ -1,12 +1,12 @@
-import { ContentWrapper, HeroButton, HeroPic, HeroPicContainer, HeroText, StyledImage } from "./styles";
+import { FlexWrapper, HeroPic, HeroPicContainer, HeroText, HomeWrapper, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
 import { H2 } from "./globalStyles";
 
 export default function Home() {
 
   return (
-    <div>
-      <ContentWrapper>
+    <HomeWrapper>
+      <FlexWrapper>
         <HeroText>Driven Frontend Software Engineer with 5+ years of work experience building frontend applications, managing a team of 10+ developers and QA reps, coordinating technical project management for complex mobile applications, presenting client demos, and mentoring junior developers.</HeroText>
         <HeroPicContainer>
           <HeroPic>
@@ -16,10 +16,10 @@ export default function Home() {
             />
           </HeroPic>
         </HeroPicContainer>
-      </ContentWrapper>
+      </FlexWrapper>
       <div>
         <H2>From the Blog</H2>
       </div>
-    </div>
+    </HomeWrapper>
   )
 }

@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import colors from './colors';
 import Image from 'next/image';
 
-export const ContentWrapper = styled.div`
+export const HomeWrapper = styled.div`
+  padding: 12px;
+`
+
+export const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   @media (max-width: 900px) {
@@ -14,7 +18,6 @@ export const ContentWrapper = styled.div`
 
 export const HeroText = styled.div`
   width: 70%;
-  padding: 12px;
   font-size: 24px;
   line-height: 32px;
   color: ${colors.light.highlight50};

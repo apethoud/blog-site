@@ -1,8 +1,28 @@
 import { FlexWrapper, HeroPic, HeroPicContainer, HeroText, HomeWrapper, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
 import { H2 } from "./globalStyles";
+import PostPreview from "./PostPreview";
+import { supabase } from "../../supabaseClient"
 
-export default function Home() {
+async function getMostRecentPost() {
+  let { data: posts, error } = await supabase
+    .from('posts')
+    .select(`
+      *,
+      paragraphs (
+        post_id,
+        id,
+        ui_order,
+        body
+      )
+    `)
+    .range(0, 0);
+  return posts[0];
+}
+
+export default async function Home() {
+  const mostRecentPost = await getMostRecentPost();
+
 
   return (
     <HomeWrapper>
@@ -19,6 +39,8 @@ export default function Home() {
       </FlexWrapper>
       <div>
         <H2>From the Blog</H2>
+        <PostPreview post={mostRecentPost} />
+        <H2>Most Recent Project</H2>
       </div>
     </HomeWrapper>
   )

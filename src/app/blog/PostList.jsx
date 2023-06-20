@@ -1,6 +1,6 @@
 'use client';
 
-import PostPreview from "./PostPreview";
+import PostPreview from "../PostPreview";
 
 export default function PostList({ posts }) {
   console.log("posts is: ", posts);

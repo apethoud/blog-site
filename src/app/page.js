@@ -18,8 +18,29 @@ async function getMostRecentPost() {
     `)
     .order('id', {ascending: false})
     .limit(1)
+    if (error) {
+      throw new Error(error);
+    }
   return posts[0];
 }
+
+//             const transaction = Sentry.startTransaction({
+//               name: "Example Frontend Transaction",
+//             });
+
+//             Sentry.configureScope((scope) => {
+//               scope.setSpan(transaction);
+//             });
+
+//             try {
+//               const res = await fetch("/sentry-test/api.js");
+//               if (!res.ok) {
+//                 throw new Error("Sentry Example Frontend Error");
+//               }
+//             } finally {
+//               transaction.finish();
+//             }
+//           }}
 
 export default async function Home() {
   const mostRecentPost = await getMostRecentPost();

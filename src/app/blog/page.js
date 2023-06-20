@@ -13,6 +13,9 @@ async function getPosts() {
         body
       )
     `);
+    if (error) {
+      throw new Error(error);
+    }
   return posts;
 }
 

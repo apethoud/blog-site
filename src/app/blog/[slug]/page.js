@@ -12,6 +12,9 @@ async function getPostBySlug(slug) {
         body
       )`)
     .eq('slug', slug);
+    if (error) {
+      throw new Error(error);
+    }
   return data[0];
 }
 

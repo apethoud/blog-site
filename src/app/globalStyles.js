@@ -17,9 +17,11 @@ export const Background = styled.body`
   all: unset;
   display: flex;
   justify-content: center;
+  border-top: 2px solid ${colors.light.highlight50};
   background-color: ${colors.light.background};
   color: ${colors.light.foreground};
   @media (prefers-color-scheme: dark) {
+    border-top: 2px solid ${colors.dark.highlight50};
     background-color: ${colors.dark.background};
     color: ${colors.dark.foreground};
   }

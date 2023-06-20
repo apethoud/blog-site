@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import colors from './colors';
 import Image from 'next/image';
 
-export const HomeWrapper = styled.div`
+export const HomeContainer = styled.div`
   padding: 12px;
 `
 
-export const FlexWrapper = styled.div`
+export const HeroContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 36px 0;
   @media (max-width: 900px) {
     flex-direction: column;
   }
@@ -25,6 +26,7 @@ export const HeroText = styled.div`
     color: ${colors.dark.highlight50};
   }
   @media (max-width: 900px) {
+    margin-bottom: 36px;
     width: 100%;
   }
 `

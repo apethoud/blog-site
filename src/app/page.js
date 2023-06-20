@@ -1,4 +1,4 @@
-import { FlexWrapper, HeroPic, HeroPicContainer, HeroText, HomeWrapper, StyledImage } from "./styles";
+import { HeroContainer, HeroPic, HeroPicContainer, HeroText, HomeContainer, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
 import { H2 } from "./globalStyles";
 import PostPreview from "./PostPreview";
@@ -25,8 +25,8 @@ export default async function Home() {
 
 
   return (
-    <HomeWrapper>
-      <FlexWrapper>
+    <HomeContainer>
+      <HeroContainer>
         <HeroText>Driven Frontend Software Engineer with 5+ years of work experience building frontend applications, managing a team of 10+ developers and QA reps, coordinating technical project management for complex mobile applications, presenting client demos, and mentoring junior developers.</HeroText>
         <HeroPicContainer>
           <HeroPic>
@@ -36,12 +36,12 @@ export default async function Home() {
             />
           </HeroPic>
         </HeroPicContainer>
-      </FlexWrapper>
+      </HeroContainer>
       <div>
         <H2>From the Blog</H2>
         <PostPreview post={mostRecentPost} />
         <H2>Most Recent Project</H2>
       </div>
-    </HomeWrapper>
+    </HomeContainer>
   )
 }

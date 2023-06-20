@@ -16,7 +16,8 @@ async function getMostRecentPost() {
         body
       )
     `)
-    .range(0, 0);
+    .order('id', {ascending: false})
+    .limit(1)
   return posts[0];
 }
 
@@ -40,7 +41,6 @@ export default async function Home() {
       <div>
         <H2>From the Blog</H2>
         <PostPreview post={mostRecentPost} />
-        <H2>Most Recent Project</H2>
       </div>
     </HomeContainer>
   )

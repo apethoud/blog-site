@@ -14,18 +14,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // <html lang="en">
-    //   <Background>
-    //     <AppContainer>
-    //       <div className={WorkSans.className}>
-    //         <Nav />
-    //         <div style={{ display: "flex", justifyContent: "center" }}>
-    //           {children}
-    //         </div>
-    //       </div>
-    //     </AppContainer>
-    //   </Background>
-    // </html>
     <html lang="en">
       <body>
         <main className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col items-center">
@@ -34,25 +22,6 @@ export default function RootLayout({ children }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}
             </div>
-            {/* <div className="flex justify-between border-b border-slate-300 dark:border-slate-700 py-3">
-              <Link href="/" className="text-lg mr-12">
-                <span className="font-bold text-slate-900 dark:text-slate-100">Andrew Pethoud</span>
-                <span className="text-slate-900 dark:text-slate-100"> | </span>
-                <span className="font-bold uppercase text-violet-600 dark:text-violet-500">Admin</span>
-              </Link>
-              <span className="text-md text-slate-900 dark:text-slate-100">
-                {user ? (
-                  <span className="flex gap-4">
-                    Hey, {user.email}! <span className="border-r border-slate-300 dark:border-slate-700"></span>{' '}
-                    <LogoutButton />
-                  </span>
-                ) : (
-                  <Link href="/login" className="hover:underline">
-                    Login
-                  </Link>
-                )}
-              </span>
-            </div> */}
             <div className="flex">
               <Text>&copy; {formatDate(undefined, "YYYY")} Andrew Pethoud</Text>
             </div>

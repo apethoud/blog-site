@@ -1,4 +1,3 @@
-import { HeroContainer, HeroPic, HeroPicContainer, HeroText, HomeContainer, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
 import Image from "next/image";
 import H2 from "./_UI-components/H2";

@@ -1,15 +1,11 @@
 'use client';
 
-import { LinkText, P } from "./globalStyles";
 import H1 from "./_UI-components/H1";
-import { PostPreviewContainer } from "./blog/styles";
 import Link from "./_UI-components/Link";
-import Timestamp from "./blog/Timestamp";
 import Text from "./_UI-components/Text";
 import { formatDate } from "./utils";
 
 export default function PostPreview({ post }) {
-  console.log("post is: ", post);
   const truncateText = text => {
     return text.slice(0, 300) + '...'
   }

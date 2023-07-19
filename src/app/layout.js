@@ -1,6 +1,5 @@
 import './globals.css'
 import Nav from './Nav'
-import { AppContainer, Background } from './globalStyles'
 import { Work_Sans } from 'next/font/google'
 import Text from './_UI-components/Text'
 import { formatDate } from './utils'

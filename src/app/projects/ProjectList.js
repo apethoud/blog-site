@@ -1,5 +1,7 @@
+import Text from "../_UI-components/Text";
+
 export default function ProjectList() {
   return (
-    <div>Coming soon</div>
+    <Text>Coming soon</Text>
   )
 }

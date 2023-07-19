@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}
             </div>
-            <div className="flex">
+            <div className="flex justify-center">
               <Text>&copy; {formatDate(undefined, "YYYY")} Andrew Pethoud</Text>
             </div>
           </div>

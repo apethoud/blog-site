@@ -19,7 +19,7 @@ async function getMostRecentPost() {
     .order('id', {ascending: false})
     .limit(1)
     if (error) {
-      throw new Error(error);
+      console.log("Error: ", error)
     }
   return posts[0];
 }

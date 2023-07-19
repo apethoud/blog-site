@@ -13,7 +13,7 @@ async function getPostBySlug(slug) {
       )`)
     .eq('slug', slug);
     if (error) {
-      throw new Error(error);
+      console.log("Error: ", error)
     }
   return data[0];
 }

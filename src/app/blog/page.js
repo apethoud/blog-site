@@ -14,7 +14,7 @@ async function getPosts() {
       )
     `);
     if (error) {
-      throw new Error(error);
+      console.log("Error: ", error)
     }
   return posts;
 }

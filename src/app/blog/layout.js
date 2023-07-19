@@ -2,8 +2,8 @@ import { BlogContainer } from "./styles";
 
 export default function Layout({ children }) {
   return (
-    <BlogContainer>
+    <div className="p-4">
       {children}
-    </BlogContainer>
+    </div>
   )
 }

@@ -47,22 +47,24 @@ export default async function Home() {
 
 
   return (
-    <HomeContainer>
-      <HeroContainer>
-        <HeroText>Driven Frontend Software Engineer with 5+ years of work experience building frontend applications, managing a team of 10+ developers and QA reps, coordinating technical project management for complex mobile applications, presenting client demos, and mentoring junior developers.</HeroText>
+    <div className="m-4">
+      <div className="flex flex-col md:flex-row my-8">
+        <div className="w-full md:w-3/4 text-2xl text-violet-600 dark:text-violet-500">
+          Hey, I'm Andrew Pethoud! I'm a full-stack software engineer 💻 who loves building joyful digital experiences for humans 👫. I'm also passionate about walkable communities 🌳 and making cities safer for bikers and pedestrians 🚴, especially when they're my own kids 🧒.
+        </div>
         <HeroPicContainer>
-          {/* <HeroPic>
+          <HeroPic>
             <StyledImage 
               src={profilePic}
               fill={true}
             />
-          </HeroPic> */}
+          </HeroPic>
         </HeroPicContainer>
-      </HeroContainer>
+      </div>
       <div>
         <H2>From the Blog</H2>
         <PostPreview post={mostRecentPost} />
       </div>
-    </HomeContainer>
+    </div>
   )
 }

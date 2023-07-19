@@ -1,5 +1,6 @@
 import { HeroContainer, HeroPic, HeroPicContainer, HeroText, HomeContainer, StyledImage } from "./styles";
 import profilePic from '../assets/profile-pic.jpg';
+import Image from "next/image";
 import { H2 } from "./globalStyles";
 import PostPreview from "./PostPreview";
 import { supabase } from "../../supabaseClient"
@@ -52,14 +53,11 @@ export default async function Home() {
         <div className="w-full md:w-3/4 text-2xl text-violet-600 dark:text-violet-500">
           Hey, I'm Andrew Pethoud! I'm a full-stack software engineer 💻 who loves building joyful digital experiences for humans 👫. I'm also passionate about walkable communities 🌳 and making cities safer for bikers and pedestrians 🚴, especially when they're my own kids 🧒.
         </div>
-        <HeroPicContainer>
-          <HeroPic>
-            <StyledImage 
-              src={profilePic}
-              fill={true}
-            />
-          </HeroPic>
-        </HeroPicContainer>
+        <div className="w-full md:w-1/4 flex justify-center">
+          <Image
+            src={profilePic}
+            className="rounded-full" />
+        </div>
       </div>
       <div>
         <H2>From the Blog</H2>

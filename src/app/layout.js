@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col items-center">
-          <div className="flex-1 flex flex-col max-w-3xl mt-24">
+          <div className="flex-1 flex flex-col w-full md:w-3/4 lg:w-1/2 mt-12">
             <Nav />
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}

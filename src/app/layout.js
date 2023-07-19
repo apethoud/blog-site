@@ -1,6 +1,8 @@
+import './globals.css'
 import Nav from './Nav'
-import { AppContainer, Background } from './globalStyles'
 import { Work_Sans } from 'next/font/google'
+import Text from './_UI-components/Text'
+import { formatDate } from './utils'
 
 const WorkSans = Work_Sans({ subsets: ['latin'] })
 
@@ -12,16 +14,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Background>
-        <AppContainer>
-          <div className={WorkSans.className}>
+      <body>
+        <main className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col items-center">
+          <div className="flex-1 flex flex-col w-full md:w-3/4 lg:w-1/2 mt-12">
             <Nav />
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}
             </div>
+            <div className="flex justify-center">
+              <Text>&copy; {formatDate(undefined, "YYYY")} Andrew Pethoud</Text>
+            </div>
           </div>
-        </AppContainer>
-      </Background>
+        </main>
+      </body>
     </html>
   )
 }

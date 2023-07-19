@@ -1,26 +1,25 @@
 'use client';
 
-import { H1, LinkText, P } from "./globalStyles";
-import { PostPreviewContainer } from "./blog/styles";
-import { Link } from "./globalStyles";
-import Timestamp from "./blog/Timestamp";
+import H1 from "./_UI-components/H1";
+import Link from "./_UI-components/Link";
+import Text from "./_UI-components/Text";
+import { formatDate } from "./utils";
 
 export default function PostPreview({ post }) {
-  console.log("post is: ", post);
   const truncateText = text => {
     return text.slice(0, 300) + '...'
   }
 
   return (
-    <PostPreviewContainer>
+    <div className="pb-6 border-b border-slate-300 dark:border-slate-700">
       <Link href={`blog/${post.slug}`}>
         <H1>{post.title}</H1>
       </Link>
-      <Timestamp date={post.created_at} />
-      <P>{truncateText(post.paragraphs[0].body)}</P>
+      <Text italic>{formatDate(post.created_at)}</Text>
+      <Text>{truncateText(post.paragraphs[0].body)}</Text>
       <Link href={`blog/${post.slug}`}>
-        <LinkText>Read More</LinkText>
+        Read More
       </Link>
-    </PostPreviewContainer>
+    </div>
   )
 }

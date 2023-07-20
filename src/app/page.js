@@ -5,8 +5,6 @@ import PostPreview from "./PostPreview";
 import { supabase } from "../../supabaseClient"
 import { lalezar, lato } from './fonts';
 
-const textShadow = "2px 1px 1px #a855f7, 1px 2px 1px #312e81, 3px 2px 1px #a855f7, 2px 3px 1px #312e81, 4px 3px 1px #a855f7, 3px 4px 1px #312e81";
-
 async function getMostRecentPost() {
   let { data: posts, error } = await supabase
     .from('posts')
@@ -53,12 +51,10 @@ export default async function Home() {
     <div className="m-4">
       <div className="flex flex-col md:flex-row mt-12 mb-24">
         <div className="md:my-12 md:pr-24 w-full md:w-3/4">
-          <div 
-            className={`text-7xl text-violet-600 dark:text-violet-50 font-bold mb-6 ${lalezar.className}`}
-            style={{ textShadow: textShadow }}>
+          <div className={`text-7xl text-violet-800 dark:text-violet-50 font-bold mb-6 ${lalezar.className} custom-shadow-effect`}>
             Hey, I'm Andrew Pethoud!
           </div>
-          <div className={`text-4xl text-violet-600 dark:text-violet-400 ${lato.className}`}>
+          <div className={`text-4xl text-violet-500 dark:text-violet-400 ${lato.className}`}>
             I'm a full-stack software developer passionate about making digital and physical spaces healthy and enjoyable for everyone.
           </div>
         </div>

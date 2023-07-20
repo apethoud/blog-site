@@ -48,9 +48,9 @@ export default async function Home() {
 
 
   return (
-    <div className="m-4">
+    <div className="m-4 w-11/12">
       <div className="flex flex-col md:flex-row mt-12 mb-24">
-        <div className="md:my-12 md:pr-24 w-full md:w-3/4">
+        <div className="md:my-12 md:pr-24 w-full">
           <div className={`text-7xl text-violet-800 dark:text-violet-50 font-bold mb-6 ${lalezar.className} custom-shadow-effect`}>
             Hey, I'm Andrew Pethoud!
           </div>

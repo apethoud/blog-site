@@ -1,10 +1,8 @@
 import './globals.css'
 import Nav from './Nav'
-import { Work_Sans } from 'next/font/google'
+import { Lalezar as LalezarFont, Work_Sans } from 'next/font/google'
 import Text from './_UI-components/Text'
 import { formatDate } from './utils'
-
-const WorkSans = Work_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col items-center">
-          <div className="flex-1 flex flex-col w-full md:w-3/4 lg:w-1/2 mt-12">
+          <div className="flex-1 flex flex-col w-full md:w-3/4 mt-12">
             <Nav />
             <div style={{ display: "flex", justifyContent: "center" }}>
               {children}

@@ -51,8 +51,8 @@ export default async function Home() {
 
   return (
     <div className="m-4">
-      <div className="flex flex-col md:flex-row my-8">
-        <div>
+      <div className="flex flex-col md:flex-row mt-12 mb-24">
+        <div className="md:my-12">
           <div 
             className={`w-full md:w-3/4 text-7xl text-violet-600 dark:text-violet-50 font-bold mb-6 ${lalezar.className}`}
             style={{ textShadow: textShadow }}>

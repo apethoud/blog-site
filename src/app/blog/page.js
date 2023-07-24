@@ -1,6 +1,8 @@
 import { supabase } from "../../../supabaseClient"
 import PostList from "./PostList";
 
+export const revalidate = 0;
+
 async function getPosts() {
   let { data: posts, error } = await supabase
     .from('posts')

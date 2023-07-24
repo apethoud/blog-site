@@ -1,6 +1,8 @@
 import { supabase } from "../../../../supabaseClient"
 import Post from "./Post";
 
+export const revalidate = 0;
+
 async function getPostBySlug(slug) {
   let { data, error } = await supabase
     .from('posts')

@@ -5,6 +5,8 @@ import PostPreview from "./PostPreview";
 import { supabase } from "../../supabaseClient"
 import { lalezar, lato } from './fonts';
 
+export const revalidate = 0;
+
 async function getMostRecentPost() {
   let { data: posts, error } = await supabase
     .from('posts')
@@ -66,7 +68,7 @@ export default async function Home() {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="md:w-3/4">
+        <div className="md:w-3/4 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">
           <H2>From the Blog</H2>
           <PostPreview post={mostRecentPost} />
         </div>

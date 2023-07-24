@@ -14,7 +14,8 @@ async function getPosts() {
         ui_order,
         body
       )
-    `);
+    `)
+    .order('id', { ascending: false });
     if (error) {
       console.log("Error: ", error)
     }

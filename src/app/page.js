@@ -57,7 +57,7 @@ export default async function Home() {
             Hey, I'm Andrew Pethoud!
           </div>
           <div className={`text-4xl text-violet-500 dark:text-violet-400 ${lato.className}`}>
-            I'm a full-stack software developer passionate about making digital and physical spaces healthy and enjoyable for everyone.
+            I'm a full-stack software developer passionate about making digital and physical spaces healthy and enjoyable for everyone!
           </div>
         </div>
         <div className="w-full md:w-1/4 flex items-center mt-12 md:mt-0">

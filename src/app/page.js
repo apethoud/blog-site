@@ -28,24 +28,6 @@ async function getMostRecentPost() {
   return posts[0];
 }
 
-//             const transaction = Sentry.startTransaction({
-//               name: "Example Frontend Transaction",
-//             });
-
-//             Sentry.configureScope((scope) => {
-//               scope.setSpan(transaction);
-//             });
-
-//             try {
-//               const res = await fetch("/sentry-test/api.js");
-//               if (!res.ok) {
-//                 throw new Error("Sentry Example Frontend Error");
-//               }
-//             } finally {
-//               transaction.finish();
-//             }
-//           }}
-
 export default async function Home() {
   const mostRecentPost = await getMostRecentPost();
 

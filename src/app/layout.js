@@ -5,7 +5,7 @@ import Text from './_UI-components/Text'
 import { formatDate } from './utils'
 
 export const metadata = {
-  title: 'Andrew Pethoud | Full-Stack Developer',
+  title: 'Andrew Pethoud | Full-Stack Developer and Walkability Advocate',
   description: "I'm a full-stack software developer passionate about making digital and physical spaces healthy and enjoyable for everyone.",
 }
 

@@ -15,6 +15,7 @@ async function getPosts() {
         body
       )
     `)
+    .eq('deleted', false)
     .order('id', { ascending: false });
     if (error) {
       console.log("Error: ", error)

@@ -19,6 +19,7 @@ async function getMostRecentPost() {
         body
       )
     `)
+    .eq('deleted', false)
     .order('id', {ascending: false})
     .limit(1)
     if (error) {

@@ -12,6 +12,13 @@ export const lato = Lato({
   display: 'swap',
 })
 
+export const latoItalic = Lato({
+  weight: '400',
+  style: 'italic',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export const latoBold = Lato({
   weight: '700',
   subsets: ['latin'],

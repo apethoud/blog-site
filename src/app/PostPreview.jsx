@@ -15,7 +15,7 @@ export default function PostPreview({ post }) {
       <Link href={`blog/${post.slug}`}>
         <H1>{post.title}</H1>
       </Link>
-      <Text italic>{formatDate(post.created_at)}</Text>
+      <Text italic faded>{formatDate(post.created_at)}</Text>
       <Text>{truncateText(post.paragraphs[0].body)}</Text>
       <Link href={`blog/${post.slug}`}>
         Read More

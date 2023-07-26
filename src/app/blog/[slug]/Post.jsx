@@ -8,7 +8,7 @@ export default function Post({ post }) {
   return (
     <>
       <H1>{post.title}</H1>
-      <Text italic>{formatDate(post.created_at)}</Text>
+      <Text italic faded>{formatDate(post.created_at)}</Text>
       {post.paragraphs.map(paragraph => (
         <Text>{paragraph.body}</Text>
       ))}

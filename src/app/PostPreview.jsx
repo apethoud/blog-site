@@ -1,7 +1,7 @@
 'use client';
 
-import H1 from "./_UI-components/H1";
-import Link from "./_UI-components/Link";
+import { H1 } from "./_UI-components/Headers";
+import { Link } from "./_UI-components/Links";
 import Text from "./_UI-components/Text";
 import { formatDate } from "./utils";
 

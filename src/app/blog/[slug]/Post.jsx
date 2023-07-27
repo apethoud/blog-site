@@ -1,8 +1,9 @@
 'use client';
 
-import H1 from "@/app/_UI-components/H1";
+import { H1 } from "@/app/_UI-components/Headers";
 import Text from "@/app/_UI-components/Text";
 import { formatDate } from "@/app/utils";
+import Paragraph from "@/app/_UI-components/Paragraph";
 
 export default function Post({ post }) {
   return (
@@ -10,7 +11,7 @@ export default function Post({ post }) {
       <H1>{post.title}</H1>
       <Text italic faded>{formatDate(post.created_at)}</Text>
       {post.paragraphs.map(paragraph => (
-        <Text>{paragraph.body}</Text>
+        <Paragraph body={paragraph.body} />
       ))}
     </>
   )

@@ -17,14 +17,14 @@ export default function Post({ post }) {
       <div className="mt-8 border-t border-violet-600 dark:border-violet-500 pt-6 font-sans italic text-lg text-slate-900 dark:text-slate-100 antialiased">
         Hey, I'm Andrew Pethoud! I'm a full-stack software engineer <span className="not-italic">💻</span> who loves building joyful digital experiences for humans <span className="not-italic">👫</span>. I'm also passionate about walkable communities <span className="not-italic">🌳</span> and making cities safer for bikers and pedestrians <span className="not-italic">🚴</span>, especially when they're my own kids <span className="not-italic">🧒</span>.
       </div>
-      <div className="flex">
-        <Text>Connect with me:</Text>
+      <div className="flex items-center">
+        <Text>Connect with me:&nbsp;</Text>
         <Link 
           href="https://twitter.com/AndrewPethoud" 
           openInNewTab>
             Twitter
         </Link>
-        <Text>|</Text>
+        <Text>&nbsp;|&nbsp;</Text>
         <Link 
           href="https://www.linkedin.com/in/andrew-pethoud-abb81967/" 
           openInNewTab>

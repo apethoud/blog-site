@@ -12,7 +12,7 @@ export default function PostPreview({ post }) {
   }
 
   return (
-    <div className="pb-6 border-b border-slate-300 dark:border-slate-700">
+    <>
       <Link href={`blog/${post.slug}`}>
         <H1>{post.title}</H1>
       </Link>
@@ -21,6 +21,6 @@ export default function PostPreview({ post }) {
       <Link href={`blog/${post.slug}`}>
         Read More
       </Link>
-    </div>
+    </>
   )
 }

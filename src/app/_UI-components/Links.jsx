@@ -17,7 +17,7 @@ export function ExtractedLinkFromMarkdown(props) {
     <a 
       href={props.href} 
       target="_blank"
-      className="font-sans font-bold text-lg text-violet-600 dark:text-violet-500 antialiased">
+      className={`${latoBold.className} text-lg text-violet-600 dark:text-violet-400 antialiased`}>
         {props.children}
     </a>
   )

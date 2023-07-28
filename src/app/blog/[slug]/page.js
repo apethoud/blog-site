@@ -12,17 +12,28 @@ async function getPostBySlug(slug) {
         id,
         ui_order,
         body
-      )`)
+      ),
+      images (
+        post_id,
+        id,
+        ui_order,
+        url
+      )
+    `)
     .eq('slug', slug);
-    if (error) {
-      console.log("Error: ", error)
-    }
-  return data[0];
+  if (error) {
+    console.log("Error: ", error)
+  }
+  return data?.[0];
 }
 
 export default async function BlogPost({ params }) {
-  const posts = await getPostBySlug(params.slug);
+  const post = await getPostBySlug(params.slug);
   return (
-    <Post post={posts} />
+    <>
+      {post && (
+        <Post post={post} />
+      )}
+    </>
   )
 }

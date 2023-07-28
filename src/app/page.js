@@ -47,7 +47,8 @@ export default async function Home() {
           <Image
             src={profilePic}
             className="rounded-full"
-            style={{ objectFit: "contain" }} />
+            style={{ objectFit: "contain" }}
+            alt="Andrew Pethoud smiling while posing for a profile photo" />
         </div>
       </div>
       <div className="flex justify-center">

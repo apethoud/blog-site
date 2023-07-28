@@ -7,10 +7,9 @@ export default function PostList({ posts }) {
   return (
     <>
       {posts.map(post => (
-        <PostPreview 
-          key={post.id}
-          post={post} 
-        />
+        <div className="pb-6 border-b border-slate-300 dark:border-slate-700" key={post.id}>
+          <PostPreview post={post} />
+        </div>
       ))}
     </>
   )

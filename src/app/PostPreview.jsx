@@ -2,6 +2,7 @@
 
 import { H1 } from "./_UI-components/Headers";
 import { Link } from "./_UI-components/Links";
+import Paragraph from "./_UI-components/Paragraph";
 import Text from "./_UI-components/Text";
 import { formatDate } from "./utils";
 
@@ -16,7 +17,7 @@ export default function PostPreview({ post }) {
         <H1>{post.title}</H1>
       </Link>
       <Text italic faded>{formatDate(post.created_at)}</Text>
-      <Text>{truncateText(post.paragraphs[0].body)}</Text>
+      <Paragraph body={truncateText(post.paragraphs[0].body)} />
       <Link href={`blog/${post.slug}`}>
         Read More
       </Link>

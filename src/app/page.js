@@ -1,6 +1,6 @@
 import profilePic from '../assets/profile-pic.jpg';
 import Image from "next/image";
-import H2 from "./_UI-components/H2";
+import { H2 } from "./_UI-components/Headers";
 import PostPreview from "./PostPreview";
 import { supabase } from "../../supabaseClient"
 import { lalezar, lato } from './fonts';

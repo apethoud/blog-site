@@ -1,39 +1,24 @@
 import profilePic from '../assets/profile-pic.jpg';
 import Image from "next/image";
-import { H2 } from "./_UI-components/Headers";
-import PostPreview from "./PostPreview";
-import { supabase } from "../../supabaseClient"
+
 import { lalezar, lato } from './fonts';
+import FeaturedPost from './FeaturedPost';
+import { Suspense } from 'react';
+import { H2 } from './_UI-components/Headers';
+import Text from './_UI-components/Text';
 
-export const revalidate = 0;
-
-async function getMostRecentPost() {
-  let { data: posts, error } = await supabase
-    .from('posts')
-    .select(`
-      *,
-      paragraphs (
-        post_id,
-        id,
-        ui_order,
-        body
-      )
-    `)
-    .eq('deleted', false)
-    .order('id', {ascending: false})
-    .limit(1)
-    if (error) {
-      console.log("Error: ", error)
-    }
-  return posts[0];
-}
+const loadingVisual = (
+  <div className="flex justify-center">
+    <div className="md:w-3/4 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">
+      <H2>From the Blog</H2>
+      <Text>Loading...</Text>
+    </div>
+  </div>
+)
 
 export default async function Home() {
-  const mostRecentPost = await getMostRecentPost();
-
-
   return (
-    <div className="m-4 w-11/12">
+    <>
       <div className="flex flex-col md:flex-row mt-12 mb-24">
         <div className="md:my-12 md:pr-24 w-full">
           <div className={`text-7xl text-violet-800 dark:text-violet-50 font-bold mb-6 ${lalezar.className} custom-shadow-effect`}>
@@ -51,12 +36,9 @@ export default async function Home() {
             alt="Andrew Pethoud smiling while posing for a profile photo" />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="md:w-3/4 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">
-          <H2>From the Blog</H2>
-          <PostPreview post={mostRecentPost} />
-        </div>
-      </div>
-    </div>
+      <Suspense fallback={loadingVisual}>
+        <FeaturedPost />
+      </Suspense>
+    </>
   )
 }

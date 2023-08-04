@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
           <div className="flex-1 flex flex-col w-full xl:w-3/4">
             <Nav />
             <div style={{ display: "flex", justifyContent: "center" }}>
-              {children}
+              <div className="m-4 w-11/12">
+                {children}
+              </div>
             </div>
             <div className="flex justify-center">
               <Text>&copy; {formatDate(undefined, "YYYY")} Andrew Pethoud</Text>

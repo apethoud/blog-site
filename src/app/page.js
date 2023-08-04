@@ -33,6 +33,7 @@ export default async function Home() {
             src={profilePic}
             className="rounded-full"
             style={{ objectFit: "contain" }}
+            priority={true}
             alt="Andrew Pethoud smiling while posing for a profile photo" />
         </div>
       </div>

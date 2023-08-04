@@ -29,12 +29,12 @@ export default async function Home() {
           </div>
         </div>
         <div className="w-full md:w-1/4 flex items-center mt-12 md:mt-0">
-          <Image
+          {/* <Image
             src={profilePic}
             className="rounded-full"
             style={{ objectFit: "contain" }}
             priority={true}
-            alt="Andrew Pethoud smiling while posing for a profile photo" />
+            alt="Andrew Pethoud smiling while posing for a profile photo" /> */}
         </div>
       </div>
       <Suspense fallback={loadingVisual}>

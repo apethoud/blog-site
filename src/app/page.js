@@ -37,9 +37,9 @@ export default async function Home() {
             alt="Andrew Pethoud smiling while posing for a profile photo" /> */}
         </div>
       </div>
-      <Suspense fallback={loadingVisual}>
+      {/* <Suspense fallback={loadingVisual}>
         <FeaturedPost />
-      </Suspense>
+      </Suspense> */}
     </>
   )
 }

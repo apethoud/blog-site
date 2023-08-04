@@ -1,6 +1,5 @@
 import './globals.css'
 import Nav from './Nav'
-import { Lalezar as LalezarFont, Work_Sans } from 'next/font/google'
 import Text from './_UI-components/Text'
 import { formatDate } from './utils'
 

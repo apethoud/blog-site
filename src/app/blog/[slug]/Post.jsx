@@ -26,7 +26,7 @@ export default function Post({ post }) {
                 width={800}
                 height={600}
                 className="my-6"
-                alt="pic"
+                alt={element.alt_text}
               />
             )}
           </div>

@@ -17,7 +17,8 @@ async function getPostBySlug(slug) {
         post_id,
         id,
         ui_order,
-        url
+        url,
+        alt_text
       )
     `)
     .eq('slug', slug);

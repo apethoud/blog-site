@@ -7,6 +7,8 @@ import { Suspense } from 'react';
 import { H2 } from './_UI-components/Headers';
 import Text from './_UI-components/Text';
 
+export const revalidate = 0;
+
 const loadingVisual = (
   <div className="flex justify-center">
     <div className="md:w-3/4 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">

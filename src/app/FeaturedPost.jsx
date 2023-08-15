@@ -2,8 +2,6 @@ import { supabase } from "../../supabaseClient"
 import { H2 } from "./_UI-components/Headers";
 import PostPreview from "./PostPreview";
 
-export const revalidate = 0;
-
 async function getMostRecentPost() {
   let { data: posts, error } = await supabase
     .from('posts')

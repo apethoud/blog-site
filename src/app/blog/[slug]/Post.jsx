@@ -7,6 +7,10 @@ import Paragraph from "@/app/_UI-components/Paragraph";
 import Image from "next/image";
 import { Link } from '@/app/_UI-components/Links'
 
+const imageLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
+
 export default function Post({ post }) {
   const postElements = [...post.paragraphs, ...post.images]
   postElements.sort((a, b) => (a.ui_order > b.ui_order) ? 1 : -1)
@@ -22,6 +26,7 @@ export default function Post({ post }) {
             )}
             {element.url && (
               <Image 
+                loader={imageLoader}
                 src={element.url}
                 width={800}
                 height={600}

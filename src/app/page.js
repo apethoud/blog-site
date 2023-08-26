@@ -23,7 +23,7 @@ export default async function Home() {
     <>
       <div className="flex flex-col md:flex-row mt-12 mb-24">
         <div className="md:my-12 md:pr-24 w-full">
-          <div className={`text-7xl text-violet-800 dark:text-violet-50 font-bold mb-6 ${lalezar.className} custom-shadow-effect`}>
+          <div className={`text-7xl text-black dark:text-violet-50 font-bold mb-6 ${lalezar.className} custom-shadow-effect`}>
             Hey, I'm Andrew Pethoud!
           </div>
           <div className={`text-4xl text-violet-500 dark:text-violet-400 ${lato.className}`}>

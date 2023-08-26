@@ -28,7 +28,9 @@ export default async function FeaturedPost() {
 
   return (
     <div className="flex justify-center">
-      <div className="md:w-3/4 bg-slate-100 dark:bg-slate-800 p-4 rounded-2xl">
+      <div className={`md:w-3/4 p-4 rounded-2xl
+        bg-slate-100
+        dark:bg-[#1C1D4B]`}>
         <H2 noMargin>From the Blog</H2>
         <PostPreview post={mostRecentPost} />
       </div>

@@ -3,6 +3,7 @@ import { H1, H3 } from "../_UI-components/Headers";
 import Text from "../_UI-components/Text";
 import PlayPathMockup from "../../assets/playpath-mockup.png";
 import UnisumMockup from "../../assets/unisum-mockup.png";
+import PortfolioSiteAndAdminMockup from "../../assets/portfolio-site-and-admin-mockup.png"
 import { Li, Ul } from "../_UI-components/Lists";
 import { Link } from "../_UI-components/Links";
 
@@ -17,8 +18,9 @@ const projects = [
     ],
     picAltText: "An iPhone mockup of PlayPath's Park Selection View, Search Criteria View, and Welcome Page.",
     builtWith: [
+      "Javascript",
       "Typescript",
-      "React",
+      "React Native",
       "Expo",
     ],
     checkItOutOn: [
@@ -38,8 +40,9 @@ const projects = [
     ],
     picAltText: "An iPhone mockup of Unisum's gameplay and menu.",
     builtWith: [
+      "Javascript",
       "Typescript",
-      "React",
+      "React Native",
       "Expo",
     ],
     checkItOutOn: [
@@ -48,7 +51,34 @@ const projects = [
         url: "https://github.com/apethoud"
       }
     ]
-  }
+  },
+  {
+    id: 3,
+    header: null,
+    name: "Personal Portfolio Site and Admin Console",
+    description: [
+      "A personal portfolio site for myself with a blog and projects page, along with a protected admin console for creating and editing content.",
+      "The admin console supports markdown when writing blog posts to easily mark content as headers, lists, links, and blockquotes, which will be shown accordingly on the portfolio site.",
+    ],
+    picAltText: "A Macbook Pro mockup of the portfolio site admin console beside an iPhone XR mockup of the portfolio site itself.",
+    builtWith: [
+      "Javascript",
+      "Typescript",
+      "React",
+      "NextJS",
+      "Supabase",
+    ],
+    checkItOutOn: [
+      {
+        name: "Github (Portfolio Site)",
+        url: "https://github.com/apethoud/blog-site",
+      },
+      {
+        name: "Github (Portfolio Admin Console)",
+        url: "https://github.com/apethoud/blog-admin",
+      }
+    ]
+  },
 ]
 
 export default function Projects() {
@@ -56,7 +86,7 @@ export default function Projects() {
     <div>
       {projects.map(project => (
         <>
-          <div className="flex flex-col md:flex-row mt-12 mb-24">
+          <div className="flex flex-col md:flex-row items-center mt-12 mb-24">
             <div className="w-full">
               {project.header && (
                 <H3>{project.header}</H3>
@@ -91,7 +121,8 @@ export default function Projects() {
             <div className="w-full">
               <Image
                 // TODO: Make src more scalable after hosting images in the cloud.
-                src={project.name === "PlayPath" ? PlayPathMockup : UnisumMockup}
+                src={project.name === "PlayPath" ? PlayPathMockup :
+                  project.name === "Unisum" ? UnisumMockup : PortfolioSiteAndAdminMockup}
                 className=""
                 priority={true}
                 alt={project.picAltText}

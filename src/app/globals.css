@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  .custom-shadow-effect {
-    text-shadow: 2px 1px 1px #a855f7, 1px 2px 1px #312e81, 3px 2px 1px #a855f7, 2px 3px 1px #312e81, 4px 3px 1px #a855f7, 3px 4px 1px #312e81;
-  }
+.custom-shadow-effect {
+  text-shadow: 2px 1px 1px #a855f7, 1px 2px 1px #312e81, 3px 2px 1px #a855f7, 2px 3px 1px #312e81, 4px 3px 1px #a855f7, 3px 4px 1px #312e81;
 }

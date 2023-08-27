@@ -16,7 +16,7 @@ export function Ul({ children }) {
 
 export function Li({ children }) {
   return (
-    <li className="font-sans text-lg text-slate-900 dark:text-slate-100 antialiased ml-8">
+    <li className="font-sans text-lg text-slate-100 antialiased ml-8">
       {children}
     </li>
   )

@@ -21,8 +21,8 @@ export default function Blockquote({ children }) {
   }
 
   return (
-    <blockquote className="my-8 border-l-4 pl-8 border-violet-600 dark:border-violet-500">
-      <div className="font-sans italic text-3xl text-slate-900 dark:text-slate-100 antialiased">
+    <blockquote className="my-8 border-l-4 pl-8 border-violet-500">
+      <div className="font-sans italic text-3xl text-slate-100 antialiased">
         {childString}
       </div>
     </blockquote>

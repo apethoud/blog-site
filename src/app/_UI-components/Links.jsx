@@ -4,7 +4,7 @@ import { latoBold } from "../fonts"
 export function Link({ children, href, openInNewTab }) {
   return (
     <NextLink
-      className={`${latoBold.className} text-lg text-violet-600 dark:text-violet-400`}
+      className={`${latoBold.className} text-lg text-violet-400`}
       href={href}
       target={openInNewTab ? "_blank" : "_self"}>
         {children}
@@ -17,7 +17,7 @@ export function ExtractedLinkFromMarkdown(props) {
     <a 
       href={props.href} 
       target="_blank"
-      className={`${latoBold.className} text-lg text-violet-600 dark:text-violet-400 antialiased`}>
+      className={`${latoBold.className} text-lg text-violet-400 antialiased`}>
         {props.children}
     </a>
   )

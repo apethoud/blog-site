@@ -4,6 +4,7 @@ import Text from "../_UI-components/Text";
 import PlayPathMockup from "../../assets/playpath-mockup.png";
 import UnisumMockup from "../../assets/unisum-mockup.png";
 import { Li, Ul } from "../_UI-components/Lists";
+import { Link } from "../_UI-components/Links";
 
 const projects = [
   {
@@ -76,7 +77,13 @@ export default function Projects() {
                 <Text>Check it out on:</Text>
                 <Ul>
                   {project.checkItOutOn.map(item => (
-                    <Li>{item.name}</Li>
+                    <Li>
+                      <Link
+                        href={item.url}
+                        openInNewTab>
+                          {item.name}
+                      </Link>
+                    </Li>
                   ))}
                 </Ul>
               </div>

@@ -3,11 +3,11 @@ import { lalezar, latoBold } from "./fonts";
 
 export default function Nav() {
   return (
-    <div className="flex justify-between items-baseline border-b border-slate-300 dark:border-slate-700 py-3">
+    <div className="flex justify-between items-baseline border-b border-slate-700 py-3">
       <Link href="/" className="mx-4">
-        <span className={`text-xl text-slate-900 dark:text-slate-100 ${latoBold.className}`}>Andrew Pethoud</span>
+        <span className={`text-xl text-slate-100 ${latoBold.className}`}>Andrew Pethoud</span>
       </Link>
-      <div className={`text-md font-bold text-slate-900 dark:text-slate-100 ${latoBold.className}`}>
+      <div className={`text-md font-bold text-slate-100 ${latoBold.className}`}>
         <Link href="/blog">
           <span className="mx-4">Blog</span>
         </Link>

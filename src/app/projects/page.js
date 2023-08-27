@@ -3,6 +3,7 @@ import { H1, H3 } from "../_UI-components/Headers";
 import Text from "../_UI-components/Text";
 import PlayPathMockup from "../../assets/playpath-mockup.png";
 import UnisumMockup from "../../assets/unisum-mockup.png";
+import { Li, Ul } from "../_UI-components/Lists";
 
 const projects = [
   {
@@ -18,6 +19,12 @@ const projects = [
       "Typescript",
       "React",
       "Expo",
+    ],
+    checkItOutOn: [
+      {
+        name: "Github",
+        url: "https://github.com/apethoud/playpath"
+      }
     ]
   },
   {
@@ -33,6 +40,12 @@ const projects = [
       "Typescript",
       "React",
       "Expo",
+    ],
+    checkItOutOn: [
+      {
+        name: "Github",
+        url: "https://github.com/apethoud"
+      }
     ]
   }
 ]
@@ -41,27 +54,44 @@ export default function Projects() {
   return (
     <div>
       {projects.map(project => (
-        <div className="flex flex-col md:flex-row mt-12 mb-24">
-          <div className="w-full">
-            {project.header && (
-              <H3>{project.header}</H3>
-            )}
-            <H1>{project.name}</H1>
-            {project.description.map(paragraph => (
-              <Text>{paragraph}</Text>
-            ))}
+        <>
+          <div className="flex flex-col md:flex-row mt-12 mb-24">
+            <div className="w-full">
+              {project.header && (
+                <H3>{project.header}</H3>
+              )}
+              <H1>{project.name}</H1>
+              {project.description.map(paragraph => (
+                <Text>{paragraph}</Text>
+              ))}
+              <div>
+                <Text>Built with:</Text>
+                <Ul>
+                  {project.builtWith.map(softwareName => (
+                    <Li>{softwareName}</Li>
+                  ))}
+                </Ul>
+              </div>
+              <div>
+                <Text>Check it out on:</Text>
+                <Ul>
+                  {project.checkItOutOn.map(item => (
+                    <Li>{item.name}</Li>
+                  ))}
+                </Ul>
+              </div>
+            </div>
+            <div className="w-full">
+              <Image
+                // TODO: Make src more scalable after hosting images in the cloud.
+                src={project.name === "PlayPath" ? PlayPathMockup : UnisumMockup}
+                className=""
+                priority={true}
+                alt={project.picAltText}
+              />
+            </div>
           </div>
-          <div className="w-full">
-            <Image
-              // TODO: Make src more scalable after hosting images in the cloud.
-              src={project.name === "PlayPath" ? PlayPathMockup : UnisumMockup}
-              className=""
-              // style={{ objectFit: "contain" }}
-              priority={true}
-              alt={project.picAltText}
-            />
-          </div>
-        </div>
+        </>
       ))}
     </div>
   )

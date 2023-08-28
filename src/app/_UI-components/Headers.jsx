@@ -10,7 +10,7 @@ export function H1({ children, noMargin }) {
 
 export function H2({ children, noMargin }) {
   return (
-    <h2 className={`${latoBold.className} text-3xl text-slate-100 ${!noMargin && "mt-12"}`}>
+    <h2 className={`${latoBold.className} text-3xl text-slate-100 ${!noMargin && "mt-16"}`}>
       {children}
     </h2>
   )

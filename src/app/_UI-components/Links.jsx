@@ -4,7 +4,7 @@ import { latoBold } from "../fonts"
 export function Link({ children, href, openInNewTab }) {
   return (
     <NextLink
-      className={`${latoBold.className} text-lg text-violet-400`}
+      className={`${latoBold.className} text-lg text-violet-400 mt-6 mb-8`}
       href={href}
       target={openInNewTab ? "_blank" : "_self"}>
         {children}

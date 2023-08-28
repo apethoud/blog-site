@@ -44,7 +44,7 @@ export default function Post({ post }) {
         <Link 
           href="https://twitter.com/AndrewPethoud" 
           openInNewTab>
-            Twitter
+            X (Twitter)
         </Link>
         <Text>&nbsp;|&nbsp;</Text>
         <Link 

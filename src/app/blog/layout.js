@@ -5,8 +5,10 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <div className="p-4 w-full lg:w-2/3">
-      {children}
+    <div className="flex justify-center">
+      <div className="p-4 w-full lg:w-2/3">
+        {children}
+      </div>
     </div>
   )
 }

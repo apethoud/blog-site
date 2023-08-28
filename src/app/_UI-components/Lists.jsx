@@ -1,3 +1,5 @@
+import Text from "./Text"
+
 export function Ol({ children }) {
   return (
     <ol className="list-decimal">
@@ -16,8 +18,10 @@ export function Ul({ children }) {
 
 export function Li({ children }) {
   return (
-    <li className="font-sans text-lg text-slate-100 antialiased ml-8">
-      {children}
+    <li className="ml-8 text-lg text-violet-400 antialiased">
+      <Text noMargin>
+        {children}
+      </Text>
     </li>
   )
 }
